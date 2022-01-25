@@ -1,6 +1,7 @@
-# SpaApp
+# MBI Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+This project is my submission for the **Full Stack Engineering Take Home Coding Challenge**.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4. 
 
 ## Development server
 

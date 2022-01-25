@@ -1,0 +1,12 @@
+<div>
+
+  <label for="verify-mbi">Verify MBI</label>
+  <input id="verify-mbi" type="text" [(ngModel)]="mbiToVerify">
+  <button (click)="verifyMbi()">Verify</button>
+  <div *ngIf="mbiVerified == VerifiedEnum.VerificationSuccessful">
+    <p>Success!</p>
+  </div>
+  <div *ngIf="mbiVerified == VerifiedEnum.VerificationFailed">
+    <p>Failed!</p>
+  </div>
+</div>

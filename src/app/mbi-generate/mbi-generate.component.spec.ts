@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MbisComponent } from './mbis.component';
+import { MbiGenerateComponent } from './mbi-generate.component';
 
-describe('MbisComponent', () => {
-  let component: MbisComponent;
-  let fixture: ComponentFixture<MbisComponent>;
+describe('MbiGenerateComponent', () => {
+  let component: MbiGenerateComponent;
+  let fixture: ComponentFixture<MbiGenerateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MbisComponent ]
+      declarations: [ MbiGenerateComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MbisComponent);
+    fixture = TestBed.createComponent(MbiGenerateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

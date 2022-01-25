@@ -9,29 +9,19 @@ enum VerifiedType {
 }
 
 @Component({
-  selector: 'app-mbis',
-  templateUrl: './mbis.component.html',
-  styleUrls: ['./mbis.component.css']
+  selector: 'app-mbi-verify',
+  templateUrl: './mbi-verify.component.html',
+  styleUrls: ['./mbi-verify.component.css']
 })
-export class MbisComponent implements OnInit {
+export class MbiVerifyComponent implements OnInit {
 
-  newMbi: Mbi;
   mbiToVerify = '';
   VerifiedEnum = VerifiedType;
   mbiVerified = VerifiedType.Unverified;
 
-  constructor(private mbiService: MbiService) {
-    this.newMbi = {
-      value: ""
-    };
-  }
+  constructor(private mbiService: MbiService) { }
 
   ngOnInit(): void {
-  }
-
-  generateMbi(): void {
-    this.mbiService.generateMbi()
-      .subscribe(mbi => this.newMbi = mbi);
   }
 
   verifyMbi(): void {
@@ -46,5 +36,4 @@ export class MbisComponent implements OnInit {
       }
     });
   }
-
 }
