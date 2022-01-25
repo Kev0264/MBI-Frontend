@@ -1,7 +1,8 @@
 {
   "/api": {
-    "target": "http://localhost:5000",
-    "secure": false,
+    "target": "https://infinite-sea-73179.herokuapp.com",
+    "secure": true,
+    "changeOrigin": true,
     "pathRewrite": {
       "^/api": ""
     }
