@@ -3,6 +3,7 @@
     "target": "https://infinite-sea-73179.herokuapp.com",
     "secure": true,
     "changeOrigin": true,
+    "logLevel": "debug",
     "pathRewrite": {
       "^/api": ""
     }
