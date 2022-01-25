@@ -1,12 +1,40 @@
-<div>
+<div class="card mt-3">
 
-  <label for="verify-mbi">Verify MBI</label>
-  <input id="verify-mbi" type="text" [(ngModel)]="mbiToVerify">
-  <button (click)="verifyMbi()">Verify</button>
-  <div *ngIf="mbiVerified == VerifiedEnum.VerificationSuccessful">
-    <p>Success!</p>
+  <div class="card-header">MBI Format Verification</div>
+  <div class="card-body">
+
+    <div class="row justify-content-center m-2">
+      <div class="col-auto">
+        <label class="form-label" for="verify-mbi">Verify MBI</label>
+      </div>
+      <div class="col-auto">
+        <input class="form-control" id="verify-mbi" type="text" [(ngModel)]="mbiToVerify">
+      </div>
+    </div>
+
+    <div class="row justify-content-center m-2">
+      <div class="col-auto">
+        <button type="button" class="btn btn-primary" (click)="verifyMbi()">Verify</button>
+      </div>
+    </div>
+
+    <div class="row m-2">
+      <div class="col">
+
+        <div *ngIf="mbiVerified == VerifiedEnum.VerificationSuccessful">
+          <div class="alert alert-success" role="alert">
+            Success!
+          </div>
+        </div>
+        <div *ngIf="mbiVerified == VerifiedEnum.VerificationFailed">
+          <div class="alert alert-danger" role="alert">
+            Failed!
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-  <div *ngIf="mbiVerified == VerifiedEnum.VerificationFailed">
-    <p>Failed!</p>
-  </div>
+
 </div>
