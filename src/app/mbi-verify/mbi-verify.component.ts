@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Mbi } from '../mbi';
 import { MbiService } from '../mbi.service';
 
+// I'm using an enum so that I can change the display on the front end based on this value
 enum VerifiedType {
   Unverified = -1,
   VerificationFailed = 0,
@@ -27,6 +28,7 @@ export class MbiVerifyComponent implements OnInit {
   verifyMbi(): void {
     this.mbiVerified = VerifiedType.Unverified;
 
+    // Subscribe to the MBI Service which will call the /verify API endpoint
     this.mbiService.verifyMbi(this.mbiToVerify)
     .subscribe(result => {
       if (result) {

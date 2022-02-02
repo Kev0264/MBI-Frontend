@@ -21,6 +21,7 @@ export class MbiGenerateComponent implements OnInit {
   }
 
   generateMbi(): void {
+    // Subscribe to the MBI Service which will call the /generate API endpoint
     this.mbiService.generateMbi()
       .subscribe(mbi => this.newMbi = mbi);
   }
